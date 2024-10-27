@@ -1,0 +1,279 @@
+---
+title: "Engaging with the Research Community"
+subtitle: "AI and Data Transformation"
+
+author: 
+  name: "John Little"
+  orcid: 0000-0002-3600-0972
+  affiliation:
+    - name: Duke University Libraries
+      department: Center for Data & Visualization Sciences
+      city: Durham
+      state: NC
+      country: US
+      url:  https://library.duke.edu/data
+institute: "Center for Data & Visualization Sciences"
+
+date: today
+
+format: 
+  revealjs:
+    #center: true
+    theme: moon
+    self-contained: true  
+    footer:  "[John R Little](https://JohnLittle.info) ● [Center for Data & Visualization Sciences](https://library.duke.edu/data/) ● [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)"
+    logo: images/cdvs_logo.jpg
+license: "CC BY"
+---
+
+# Patron-driven interactions
+
+Computational workflows, data transformations, and Analysis
+
+::: notes
+How does CDVS help people with data?
+
+-   transformation
+-   analysis
+-   Leverage AI
+
+Does ChatGPT change the questions we are asked?
+:::
+
+## AI and new challenges {.center}
+
+-   Introduction of Generative LLMs (e.g., ChatGPT)
+-   New challenges for patrons:
+    1.  How to ask questions of a generative AI
+    2.  How to frame questions to reflect data goals
+-   Translation
+-   Synethesis
+
+::: notes
+Many times people consult with us because they need assistance with the conceptual and/or practical aspect of handling their data.
+
+Perhaps they want to or need to overcome an information, skill, or workflow deficit.
+
+These days, there is a new tool on the block, Generative LLMs that can answer many well formed questions (e.g. ChatGPT).
+
+For those with an information or skill deficit, this poses two new challenges.
+:::
+
+## The Confidence v Competence Paradox
+
+\
+
+-   LLMs give confident responses
+-   Responses are predictions, not necessarily correct answers
+-   Incorrect predictions = "hallucinations"
+-   Verification is crucial
+-   Paradox: More knowledge leads to better evaluation of AI responses
+
+::: notes
+-   AI is confident
+:::
+
+# Use case - Code generation
+
+-   Data transformation
+-   Data analysis
+-   Iteration
+-   Big Data
+-   AI assistance / AI-paired coding
+
+::: notes
+Use-case: A question came to me about data transformation and iteration.\
+How can AI assist with this?
+:::
+
+## Goal {.center}
+
+Create scatter plots, one for each home world
+
+::: notes
+-   Million row data set
+-   Data not in the right shape
+-   Transform the data
+-   Create outputs based on unique categories
+:::
+
+## Case Study - Star Wars Dataset
+
+| Homeworld | Heights | Masses | Characters |
+|----|----|----|----|
+| Tatooine | 172, 188, 178 | 77, 84, 120 | Luke Skywalker, Anakin Skywalker, Owen Lars |
+| Alderaan | 150, 191 | 49, 85 | Leia Organa, Bail Prestor Organa |
+| Naboo | 165, 196, 170 | 45, 66, 75 | Padmé Amidala, Isadore, Palpatine |
+| Coruscant | 66, 188 | 17, 84 | Yoda, Mace Windu |
+
+::: notes
+This is an abridged adaptation, simplified to protect the innocent. The output in this example is four scatter plots, one for each homeworld. The actual question was about iteration over big data.
+
+-   Outputs included regressions
+-   Scatterplots are an example of the output
+-   Plots are not meant to suggest best practice
+:::
+
+## Example {.top}
+
+::::::: r-stack
+::: fragment
+![](images/starwars_alderaan.png){.absolute top="75" left="0" width="350" height="250"}
+:::
+
+::: {.fragment .fade-in}
+![](images/starwars_tatooine.png){.absolute top="20" right="150" width="350" height="250"}
+:::
+
+::: {.fragment .fade-in}
+![](images/starwars_naboo.png){.absolute top="400" left="200" width="350" height="250"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](images/starwars_coruscant.png){.absolute top="325" right="25" width="350" height="250"}
+:::
+:::::::
+
+## Challenges in AI Assistance
+
+-   AI *can* handle well some basic visualization and coding
+-   Struggles with complex data shaping and iteration
+-   This problem is easier when the user has knowledge in:
+    -   Coding concepts
+    -   Data shaping
+    -   Visualization
+    -   Iteration for large datasets
+
+::: notes
+deliniate but avoid discussion here
+:::
+
+# When it goes wrong
+
+## Word problems {.center}
+
+Prompt: Inconsistent AI responses for "How long does it take to walk 10,000 steps on a treadmill at 1.2 MPH?"
+
+-   Lesson 1: Importance of cross-verification
+-   Lesson 2: Prediction is not the same as mathmatical truth
+
+## EEBO {.center}
+
+No ground truth
+
+![](images/Salue_Dues_Rex_Iudæorum_1611.jpg)
+
+## Code
+
+#### Translation done poorly
+
+-   Due to insufficient background and/or prompting
+
+#### AI-paired code generation
+
+-   Some clear winners and losers in the big names. aka each LLM has it's own evolving strengths, weaknesses, and tendencies.
+
+\
+
+These problem highlights the Competence v Confidence Paradox but are easily **verifiable**
+
+# When it goes right
+
+and how *right* does it go?
+
+## Synethtic questions {.center}
+
+Prompt:   Compare student body and faculty diversity at Duke University with UNCG. Compare today with 1985.
+
+-   Lesson 1: Different LLMs give different amounts of evidence for verification
+-   Lesson 2: Differing amounts of ground truth will affect the prediction
+
+## Code translation {.center}
+
+I have Python code, give it to me in R
+
+::: notes
+Ask the same questions on a **different day**
+:::
+
+### Variations in code translations
+
+-   R to Python
+-   Python to R
+-   SQL from natural language
+-   javascript
+-   HTML
+
+::: notes
+Generation Ai-paired assistance Translation
+:::
+
+## Natural language {.center}
+
+ 
+
+How can I use the phrase "*Sticky Wicket*" in German?
+
+-   Translate *Sticky Wicket* to German
+-   But how to verify (same as code problem)
+
+## Value in Reproducibility
+
+-   Coding
+    -   Do everything with code
+    -   Including report generation
+-   No Code
+    -   Getting better all the time
+
+\
+Increasingly we are seeing computation environments with build-in AI-pairing
+
+#  {background-image="images/ithaka_gen-ai_biomedical_researchers_oct-2024.png" background-size="contain"}
+
+# Solutions
+
+and best practices
+
+## Problems and Solutions
+
+-   GIGO (Garbage In, Garbage Out) still applies
+-   Prompt engineering is a crucial skill
+-   AI excels in translation tasks
+-   Good for synthetic questions with possible validation
+-   Less reliable for tasks without established ground truth
+
+## Best Practices
+
+Using Broad-base LLMs:
+
+-   ChatGPT
+-   Microsoft Copilot
+-   Claude.ai
+-   Gemini.google.com
+-   GitHub Copilot (for AI-paired coding)
+
+## Prompt Engineering
+
+-   Identify role
+-   Identify audience
+-   Identify voice
+-   Identify goals and problem
+-   Use multiple steps
+-   Verify
+
+# Conclusion
+
+Embracing AI in data analysis
+
+-   AI is a powerful tool, but requires careful use
+-   The library offers crucial guidance
+-   Continuous learning and adaptation are essential
+
+::: notes
+### Questions
+
+1.  How do you see these tools or techniques impacting research and research investment?
+2.  Do you have data transrormation, reshaping, or analysis tasks that could benefit from AI assistance?
+3.  In what ways do you think we can improve training and assistance for next generation LLMs?
+4.  What are some of the biggest challenges you see in the future of AI-paired coding?
+:::
